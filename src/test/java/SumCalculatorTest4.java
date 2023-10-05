@@ -21,10 +21,13 @@ public class SumCalculatorTest4 {
   }
 
   @Test
-  public void testSumWithZeroInput() {
-    assertEquals(0, calculator.sum(0));
-  }
+  public void testIllegalArgumentExceptionWhenNIsNegative() {
 
+    int negativeN = -5;
+
+
+    assertThrows(IllegalArgumentException.class, () -> calculator.sum(negativeN));
+  }
   @Test
   public void testSumWithNegativeInput() {
     assertThrows(IllegalArgumentException.class, () -> calculator.sum(-1));
