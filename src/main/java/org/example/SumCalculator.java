@@ -6,10 +6,10 @@ public class SumCalculator {
       throw new  IllegalArgumentException();
 
     }
-    int total = 0;
+    int totals = 0;
     for (int i = 1; i <= n; i++) {
-      total += i;
+      totals += i;
     }
-    return total;
+    return totals;
   }
 }
